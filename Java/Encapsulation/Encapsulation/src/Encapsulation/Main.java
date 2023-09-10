@@ -1,0 +1,22 @@
+package Encapsulation;
+
+public class Main {
+    
+    public static void main(String[] args) {
+        Player player = new Player();
+        // player.name = "Tim";
+        player.health = 20;
+        player.weapon = "Sword";
+
+        int damage = 10;
+        player.loseHealth(damage);
+        System.out.println("Remaining health: " + player.healthRemaining());
+        // player.health = 200; // encapsulation prevents this with "checks" in the Player class
+        player.loseHealth(11);
+        System.out.println("Remaining health = " + player.healthRemaining());
+
+        EnhancedPlayer jim = new EnhancedPlayer("Jim", "Sword", 200);
+        System.out.println("Initial health is " + jim.healthRemaining());
+    }
+    
+}
